@@ -1,18 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9833652D-4424-42D0-ABB4-2507F387A7D3}</ProjectGuid>
+    <ProjectGuid>{CC8187D0-F11B-4AE6-B531-9078A0D235FE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mneme.Api.Tests</RootNamespace>
-    <AssemblyName>Mneme.Api.Tests</AssemblyName>
+    <RootNamespace>Mneme.StorageLogic</RootNamespace>
+    <AssemblyName>Mneme.StorageLogic</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <IsCodedUITest>False</IsCodedUITest>
-    <TestProjectType>UnitTest</TestProjectType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,40 +30,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Abstractions" />
-    <Reference Include="System.Web.Routing" />
-    <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Mneme.Api\Mneme.Api.csproj">
-      <Project>{EF2823C2-EEE1-46FB-BAF1-0D722A5F74F9}</Project>
-      <Name>Mneme.Api</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Mneme.Common\Mneme.Common.csproj">
       <Project>{44e36137-b608-412e-a3af-7232d285feb9}</Project>
       <Name>Mneme.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Mneme.DomainModel\Mneme.DomainModel.csproj">
-      <Project>{10fa880e-24d9-47b1-8fa3-a6cd55df5c8a}</Project>
-      <Name>Mneme.DomainModel</Name>
+    <ProjectReference Include="..\Mneme.InternalModel\Mneme.InternalModel.csproj">
+      <Project>{8f79cc38-625a-4d77-ac99-416ec8242ca1}</Project>
+      <Name>Mneme.InternalModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mneme.Model\Mneme.Model.csproj">
+      <Project>{3557d914-c1c6-4da7-a2a8-12ff78a31b7b}</Project>
+      <Name>Mneme.Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

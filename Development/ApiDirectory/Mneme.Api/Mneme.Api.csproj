@@ -105,6 +105,20 @@
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mneme.BusinessLogic\Mneme.BusinessLogic.csproj">
+      <Project>{e28f3275-6029-4010-ba99-0728f26959b4}</Project>
+      <Name>Mneme.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mneme.Common\Mneme.Common.csproj">
+      <Project>{44e36137-b608-412e-a3af-7232d285feb9}</Project>
+      <Name>Mneme.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mneme.DomainModel\Mneme.DomainModel.csproj">
+      <Project>{10fa880e-24d9-47b1-8fa3-a6cd55df5c8a}</Project>
+      <Name>Mneme.DomainModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
