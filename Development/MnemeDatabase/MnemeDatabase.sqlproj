@@ -68,5 +68,10 @@
     <Build Include="Mneme.sql" />
     <Build Include="Tables\Version.sql" />
     <Build Include="Tables\Family.sql" />
+    <Build Include="Tables\Datatype.sql" />
+    <Build Include="Tables\Field.sql" />
+    <Build Include="Tables\Api.sql" />
+    <Build Include="Tables\Repository.sql" />
+    <Build Include="Tables\Endpoint.sql" />
   </ItemGroup>
 </Project>
